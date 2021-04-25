@@ -17,11 +17,11 @@ class BlogSeederTable extends Seeder
     public function run()
     {
         $faker = Faker::create('App\Blog');
-        for($i = 1 ; $i <= 10 ; $i++){
+        for($i = 1 ; $i <= 5 ; $i++){
 	        DB::table('blogs')->insert([
 	        	'title' => $faker->sentence(),
 	        	'content' => $faker->paragraph(),
-	        	'user_id' => 2,
+	        	'user_id' => 3,
 	        	'created_at' => \Carbon\Carbon::now(),
 	        	'Updated_at' => \Carbon\Carbon::now(),
 	        ]);
